@@ -1,10 +1,23 @@
 <template>
-    <div class="test">aaaa</div>
+    <div class="app">
+        <Banner></Banner>
+        <Silder class="silder"></Silder>
+        <router-view class="content"></router-view>
+    </div>
 </template>
 <script>
-    export default {
+    import Silder from '../components/Silder.vue'
+    import Banner from '../components/Banner.vue'
 
+    export default {
+      components: {
+        Banner,
+        Silder
+      }
     }
 </script>
 <style lang="scss">
+    .app {
+
+    }
 </style>

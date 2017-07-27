@@ -2,21 +2,25 @@ import { posix } from 'path'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
 
-const assetsPath = (...relativePath) => posix.join(__dirname, '../../', ...relativePath)
+export const assetsPath = (...relativePath) => posix.join(__dirname, '../../', ...relativePath)
 
 export default {
   entry: {
     app: [assetsPath('src', 'index.js')],
-    vendor: ['vue']
+    vendor: ['vue', 'vue-router', 'vuex', 'axios', 'iview']
   },
   profile: false,
   output: {
     path: assetsPath('dist'),
     filename: '[name].js',
+    chunkFilename: '[name].chunk.js',
     publicPath: '/'
   },
   resolve: {
-    extensions: ['.js', '.vue', '.json']
+    extensions: ['.js', '.vue', '.json'],
+    alias: {
+      'connect': assetsPath('src', 'utils', 'connect')
+    }
   },
   module: {
     rules: [{
@@ -44,8 +48,7 @@ export default {
           loader: 'css-loader!sass-loader'
         }],
         fallback: 'vue-style-loader'
-      }),
-      include: [assetsPath('src')]
+      })
     },
     {
       test: /\.css$/,
@@ -54,8 +57,7 @@ export default {
           loader: 'css-loader'
         }],
         fallback: 'vue-style-loader'
-      }),
-      include: [assetsPath('src')]
+      })
     },
     {
       test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
@@ -86,7 +88,8 @@ export default {
   plugins: [
     new HtmlWebpackPlugin({
       chunks: ['app', 'vendor'],
-      filename: `index.html`
+      filename: `index.html`,
+      template: assetsPath('src/tpl.html')
     }),
     new ExtractTextPlugin({
       filename: 'css/[name].[contenthash:7].css'

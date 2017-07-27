@@ -1,7 +1,9 @@
 # IView Admin
 
 [![vue](https://img.shields.io/badge/vue-^2.4.2-brightgreen.svg?style=flat-square)](https://github.com/vuejs/vue)
-[![iview](https://img.shields.io/badge/iview-^2.0.0_rc.19-yellowgreen.svg?style=flat-square)](https://github.com/iview/iview)
+[![vuex](https://img.shields.io/badge/vuex-^2.3.1-brightgreen.svg?style=flat-square)](https://github.com/vuejs/vuex)
+[![vue-router](https://img.shields.io/badge/vue--router-^2.7.0-brightgreen.svg?style=flat-square)](https://github.com/vuejs/vue-router)
+[![iview](https://img.shields.io/badge/iview-^2.0.0--rc.19-yellowgreen.svg?style=flat-square)](https://github.com/iview/iview)
 
 [![GitHub issues](https://img.shields.io/github/issues/Jetsly/iview-admin.svg?style=flat-square)](https://github.com/Jetsly/iview-admin/issues)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/Jetsly/iview-admin/pulls)
@@ -28,13 +30,11 @@
 │ │ └── App.vue      # 路由入口
 │ ├── /models/       # 数据模型
 │ ├── /services/     # 数据接口
-│ ├── /themes/       # 项目样式
 │ ├── /mock/         # 数据mock
 │ ├── /utils/        # 工具函数
 │ │ ├── config.js    # 项目常规配置
 │ │ ├── menu.js      # 菜单及面包屑配置
-│ │ ├── request.js   # 异步请求函数
-│ │ └── theme.js     # 项目需要在js中使用到样式变量
+│ │ └── request.js   # 异步请求函数
 │ ├── route.js       # 路由配置
 │ ├── index.js       # 入口文件
 │ └── index.html     

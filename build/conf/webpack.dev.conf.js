@@ -1,9 +1,13 @@
 import webpack from 'webpack'
 import WebpackConfig from 'webpack-config'
 import FriendlyErrorsWebpackPlugin from 'friendly-errors-webpack-plugin'
+import { assetsPath } from './webpack.base.conf'
 
-export default new WebpackConfig().extend('build/conf/webpack.base.conf').merge({
-  devtool: 'source-map',
+export default new WebpackConfig().extend({'build/conf/webpack.base.conf': config => {
+  config.entry.vendor = [assetsPath('build/es/dev-client.js')].concat(config.entry.vendor)
+  return config
+}}).merge({
+  devtool: 'cheap-source-map',
   plugins: [
     new webpack.EnvironmentPlugin({
       NODE_ENV: JSON.stringify('development'),
@@ -15,11 +19,7 @@ export default new WebpackConfig().extend('build/conf/webpack.base.conf').merge(
       name: 'vendor',
       minChunks: Infinity
     }),
-    new FriendlyErrorsWebpackPlugin(),
-    new webpack.SourceMapDevToolPlugin({
-      filename: '[name].js.map',
-      exclude: ['vendor.js']
-    })
+    new FriendlyErrorsWebpackPlugin()
   ]
 })
 
