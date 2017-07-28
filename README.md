@@ -15,7 +15,6 @@
 
 -   基于[vue](https://github.com/vuejs/vue)，[iview](https://github.com/iview/iview)，[axios](https://github.com/mzabriskie/axios)，[Mock](https://github.com/nuysoft/Mock) 
 -   借鉴[dva](https://github.com/dvajs/dva)动态加载 Model 和路由，按需加载的思路。
--   浅度响应式设计。
 
 ## 更新日志
 
@@ -25,7 +24,7 @@
 
 -     完成基本架子的搭建。
 
-      [More Change Log](https://github.com/Jetsly/iview-admin/wiki/More-Change-Log)
+    [More Change Log](https://github.com/Jetsly/iview-admin/wiki/More-Change-Log)
 
 ## 开发构建
 
