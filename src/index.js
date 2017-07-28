@@ -1,7 +1,10 @@
 import Vue from 'vue'
 import iView from 'iview'
-import 'iview/dist/styles/iview.css'
 import dva from './dva'
+import './themes/index.scss'
+if (process.env.NODE_ENV !== 'production') {
+  require('./mock')
+}
 
 Vue.use(iView)
 dva.router.beforeEach((to, from, next) => {

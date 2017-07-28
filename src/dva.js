@@ -5,12 +5,17 @@ import VueRouter from 'vue-router'
 Vue.use(Vuex)
 Vue.use(VueRouter)
 let store = new Vuex.Store()
+let router = new VueRouter()
+
 const registerModule = model => {
   model.namespaced = true
   store.registerModule(model.namespace, model)
+  if (model.subscriptions) {
+    (model.subscriptions.setup || (() => {}))(store)
+  }
 }
 
-const routes = [{
+router.addRoutes([{
   path: '/',
   component: resolve => require.ensure([], () => {
     registerModule(require('./models/app.js').default)
@@ -23,11 +28,9 @@ const routes = [{
       resolve(require('./routes/Dashboard.vue'))
     }, 'routes')
   }]
-}]
+}])
 
 export default {
-  router: new VueRouter({
-    routes
-  }),
+  router: router,
   store: store
 }

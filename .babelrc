@@ -1,6 +1,11 @@
 {
   "presets": [
-    ["env"], "stage-0"
+    ["env",{
+     "modules": false,
+      "targets": {
+        "browsers": ["last 2 versions", "safari >= 7"]
+      }
+    }], "stage-0"
   ],
   "plugins": ["transform-runtime"]
 }

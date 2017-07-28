@@ -8,8 +8,3 @@
 
     }
 </script>
-<style lang="scss">
-    .banner {
-        line-height: 40px;
-    }
-</style>

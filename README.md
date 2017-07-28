@@ -3,7 +3,7 @@
 [![vue](https://img.shields.io/badge/vue-^2.4.2-brightgreen.svg?style=flat-square)](https://github.com/vuejs/vue)
 [![vuex](https://img.shields.io/badge/vuex-^2.3.1-brightgreen.svg?style=flat-square)](https://github.com/vuejs/vuex)
 [![vue-router](https://img.shields.io/badge/vue--router-^2.7.0-brightgreen.svg?style=flat-square)](https://github.com/vuejs/vue-router)
-[![iview](https://img.shields.io/badge/iview-^2.0.0--rc.19-yellowgreen.svg?style=flat-square)](https://github.com/iview/iview)
+[![iview](https://img.shields.io/badge/iview-^2.0.0-brightgreen.svg?style=flat-square)](https://github.com/iview/iview)
 
 [![GitHub issues](https://img.shields.io/github/issues/Jetsly/iview-admin.svg?style=flat-square)](https://github.com/Jetsly/iview-admin/issues)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/Jetsly/iview-admin/pulls)
@@ -13,10 +13,19 @@
 
 ## 特性
 
-
+-   基于[vue](https://github.com/vuejs/vue)，[iview](https://github.com/iview/iview)，[axios](https://github.com/mzabriskie/axios)，[Mock](https://github.com/nuysoft/Mock) 
+-   借鉴[dva](https://github.com/dvajs/dva)动态加载 Model 和路由，按需加载的思路。
+-   浅度响应式设计。
 
 ## 更新日志
 
+### 0.0.1
+
+`2017-07-28`
+
+-     完成基本架子的搭建。
+
+      [More Change Log](https://github.com/Jetsly/iview-admin/wiki/More-Change-Log)
 
 ## 开发构建
 
@@ -31,6 +40,7 @@
 │ ├── /models/       # 数据模型
 │ ├── /services/     # 数据接口
 │ ├── /mock/         # 数据mock
+│ ├── /themes/       # 主题文件
 │ ├── /utils/        # 工具函数
 │ │ ├── config.js    # 项目常规配置
 │ │ ├── menu.js      # 菜单及面包屑配置
@@ -42,7 +52,7 @@
 └── .eslintrc        # Eslint配置
 ```
 
-文件夹命名说明:
+<!-- 文件夹命名说明: -->
 
 
 ### 快速开始

@@ -7,6 +7,9 @@ export default linkStore => {
       },
       dispatch: function () {
         return this.$store.dispatch
+      },
+      getters: function () {
+        return this.$store.getters
       }
     }
   }

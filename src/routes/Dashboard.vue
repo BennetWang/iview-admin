@@ -1,6 +1,7 @@
 <template>
   <div class="dashboard">
     <div>{{state.dashboard.count}}</div>
+    <div>{{getters['dashboard/countString']}}</div>
     <Button type="primary" @click="dispatch('dashboard/add')">add</Button>
     <Button type="ghost" @click="dispatch('dashboard/minus')">minus</Button>
   </div>
@@ -11,5 +12,3 @@
       mixins: [connect(({dashboard}) => ({dashboard}))]
     }
 </script>
-<style lang="scss">
-</style>

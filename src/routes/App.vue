@@ -8,16 +8,12 @@
 <script>
     import Silder from '../components/Silder.vue'
     import Banner from '../components/Banner.vue'
-
     export default {
       components: {
         Banner,
         Silder
+      },
+      created () {
       }
     }
 </script>
-<style lang="scss">
-    .app {
-
-    }
-</style>
